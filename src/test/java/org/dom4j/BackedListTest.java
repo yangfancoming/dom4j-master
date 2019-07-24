@@ -13,8 +13,7 @@ import java.util.List;
  * @version $Revision: 1.3 $
  */
 public class BackedListTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
         Element element = (Element) document.selectSingleNode("/root");
         mutate(element);

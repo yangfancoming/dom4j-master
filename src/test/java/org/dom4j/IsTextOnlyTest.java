@@ -10,8 +10,7 @@ package org.dom4j;
  * @version $Revision: 1.3 $
  */
 public class IsTextOnlyTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testDocument() throws Exception {
         DocumentFactory factory = new DocumentFactory();
         Element root = factory.createElement("root");

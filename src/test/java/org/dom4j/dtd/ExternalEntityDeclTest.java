@@ -25,8 +25,7 @@ import org.dom4j.DocTypeTest;
  */
 public class ExternalEntityDeclTest extends AbstractTestCase {
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testToString() {
         ExternalEntityDecl decl1 = new ExternalEntityDecl("name", null,
                 "systemID");

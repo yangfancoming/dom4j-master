@@ -14,8 +14,7 @@ import org.dom4j.Node;
  * @version $Revision: 1.4 $
  */
 public class SelectSingleNodeTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testSelectSingleNode() throws Exception {
         Document document = getDocument("/xml/test/jimBrain.xml");
         Node node = document.selectSingleNode("/properties/client/threadsafe");

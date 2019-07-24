@@ -22,8 +22,7 @@ public class BooleanTest extends AbstractTestCase {
             "name()='author'", "name()='XXXX'", ".='James Strachan'",
             ".='XXXX'"};
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
         int size = paths.length;
 

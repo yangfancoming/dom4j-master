@@ -1,11 +1,4 @@
-/*
- * Copyright 2001-2004 (C) MetaStuff, Ltd. All Rights Reserved.
- * 
- * This software is open source. 
- * See the bottom of this file for the licence.
- * 
- * $Id: ToTextTest.java,v 1.4 2005/01/29 14:53:13 maartenc Exp $
- */
+
 
 package org.dom4j.samples.performance;
 

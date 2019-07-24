@@ -290,7 +290,6 @@ public class SAXReader {
         if (this.encoding != null) {
             source.setEncoding(this.encoding);
         }
-
         return read(source);
     }
 

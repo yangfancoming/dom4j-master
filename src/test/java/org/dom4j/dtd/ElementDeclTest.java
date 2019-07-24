@@ -22,8 +22,7 @@ import org.dom4j.DocTypeTest;
  */
 public class ElementDeclTest extends AbstractTestCase {
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
 
     /**
      * Test

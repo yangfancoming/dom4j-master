@@ -14,8 +14,7 @@ import java.util.List;
  * @version $Revision: 1.4 $
  */
 public class GetPathTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testGetPath() throws Exception {
         log("Testing paths");
 

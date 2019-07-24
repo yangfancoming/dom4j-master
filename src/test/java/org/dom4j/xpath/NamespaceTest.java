@@ -20,8 +20,7 @@ public class NamespaceTest extends AbstractTestCase {
             "/Template/Application1/namespace::*",
             "/Template/Application1/namespace::xplt", "//namespace::*"};
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
       for (String path : paths) {
         testXPath(path);

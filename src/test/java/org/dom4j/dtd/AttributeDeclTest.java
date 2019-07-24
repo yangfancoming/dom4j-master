@@ -35,8 +35,7 @@ import org.dom4j.DocumentType;
  */
 public class AttributeDeclTest extends AbstractTestCase {
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
 
     /**
      * Test

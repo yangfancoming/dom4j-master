@@ -15,8 +15,7 @@ import org.dom4j.XPath;
 public class ObjectTest extends AbstractTestCase {
     protected static String[] paths = {"name(/.)", "name()"};
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
         Node element = document.selectSingleNode("//author");
         int size = paths.length;

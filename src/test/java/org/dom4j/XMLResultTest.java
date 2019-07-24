@@ -22,8 +22,7 @@ import java.io.StringWriter;
 public class XMLResultTest extends AbstractTestCase {
     protected static final boolean VERBOSE = false;
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testWriter() throws Exception {
         // load a default transformer
         TransformerFactory factory = TransformerFactory.newInstance();

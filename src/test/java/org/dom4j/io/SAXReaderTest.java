@@ -12,18 +12,13 @@ import java.util.List;
 
 /**
  * A test harness to test the content API in DOM4J
- * 
  * @author <a href="mailto:maartenc@sourceforge.net">Maarten Coene </a>
  */
 public class SAXReaderTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
 
     /**
      * Test bug reported by Christian Oetterli http://tinyurl.com/6po8v
-     * 
-     * @throws Exception
-     *             DOCUMENT ME!
+     * @throws Exception    DOCUMENT ME!
      */
     public void testReadFile() throws Exception {
         File file = getFile("/xml/#.xml");
@@ -35,13 +30,11 @@ public class SAXReaderTest extends AbstractTestCase {
         SAXReader reader = new SAXReader();
         reader.setEncoding("ISO-8859-1");
         Document doc = reader.read(new StringReader(xml));
-        
         assertEquals("encoding incorrect", "ISO-8859-1", doc.getXMLEncoding());
     }
 
     public void testRussian() throws Exception {
         Document doc = getDocument("/xml/russArticle.xml");
-
         assertEquals("encoding not correct", "koi8-r", doc.getXMLEncoding());
 
         Element el = doc.getRootElement();
@@ -56,8 +49,7 @@ public class SAXReaderTest extends AbstractTestCase {
 
     public void testRussian2() throws Exception {
         Document doc = getDocument("/xml/russArticle.xml");
-        XMLWriter xmlWriter = new XMLWriter(new OutputFormat("", false,
-                "koi8-r"));
+        XMLWriter xmlWriter = new XMLWriter(new OutputFormat("", false,"koi8-r"));
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         xmlWriter.setOutputStream(out);
         xmlWriter.write(doc);
@@ -77,12 +69,10 @@ public class SAXReaderTest extends AbstractTestCase {
         List<Node> l = doc.selectNodes("//broked/junk");
 
         for (Node aL : l) {
-            System.out.println("Found node: "
-                    + ((Element) aL).getStringValue());
+            System.out.println("Found node: "  + aL.getStringValue());
         }
-
-        assertEquals("hi there", ((Element) l.get(0)).getStringValue());
-        assertEquals("hello world", ((Element) l.get(1)).getStringValue());
+        assertEquals("hi there", l.get(0).getStringValue());
+        assertEquals("hello world", l.get(1).getStringValue());
     }
 
     public void testEscapedComment() throws Exception {

@@ -18,8 +18,7 @@ import java.util.Calendar;
  * @version $Revision: 1.4 $
  */
 public class DataTypesTest extends AbstractDataTypeTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testgMonthDay() throws Exception {
         testNodes("//gMonthDayTag", Calendar.class);
     }

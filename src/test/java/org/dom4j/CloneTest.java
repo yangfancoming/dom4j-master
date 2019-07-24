@@ -17,8 +17,7 @@ import java.util.Comparator;
 public class CloneTest extends AbstractTestCase {
     private Comparator comparator = new NodeComparator();
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testBug1148333() {
         DOMDocumentFactory factory = (DOMDocumentFactory) DOMDocumentFactory
                 .getInstance();

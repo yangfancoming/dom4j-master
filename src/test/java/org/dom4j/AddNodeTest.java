@@ -8,8 +8,7 @@ package org.dom4j;
  * @author Philippe Ombredanne
  */
 public class AddNodeTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testDom4jAddNodeClone() {
         Document maindoc = DocumentHelper.createDocument();
         Element docroot = maindoc.addElement("document");

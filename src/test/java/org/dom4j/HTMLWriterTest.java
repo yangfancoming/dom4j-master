@@ -14,8 +14,7 @@ import java.io.StringWriter;
  * @version $Revision: 1.4 $
  */
 public class HTMLWriterTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testWriter() throws Exception {
         String xml = "<html> <body><![CDATA[First&nbsp;test]]></body> </html>";
         Document document = DocumentHelper.parseText(xml);

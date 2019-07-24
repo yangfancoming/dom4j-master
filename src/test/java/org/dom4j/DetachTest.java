@@ -9,8 +9,7 @@ package org.dom4j;
  * @version $Revision: 1.3 $
  */
 public class DetachTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testRoot() throws Exception {
         document.setName("doc1");
 

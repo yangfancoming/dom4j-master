@@ -19,8 +19,7 @@ import java.util.List;
  * @version $Revision: 1.4 $
  */
 public class XSLTTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testTransform() throws Exception {
         Document transformedDoc = transform("/xml/nitf/ashtml.xsl");
 

@@ -23,8 +23,7 @@ public class PrefixTest extends AbstractTestCase {
             "/Template/Application1/xpl:insertText",
             "/Template/Application2/xpl:insertText"};
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
         int size = paths.length;
 

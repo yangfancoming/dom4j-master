@@ -19,8 +19,7 @@ import java.util.Map;
  * @version $Revision: 1.3 $
  */
 public class UriMapTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testURIMap() throws Exception {
         Map<String, String> uris = new HashMap<String, String>();
         uris.put("SOAP-ENV", "http://schemas.xmlsoap.org/soap/envelope/");

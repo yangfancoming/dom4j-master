@@ -9,8 +9,7 @@ package org.dom4j;
  * @version $Revision: 1.3 $
  */
 public class MakeElementTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testMakeElement() throws Exception {
         Document doc = DocumentHelper.createDocument();
 

@@ -27,8 +27,7 @@ public class NamespaceTest extends AbstractTestCase {
     private static final QName XSL_TEMPLATE = QName.get("template",
             XSL_NAMESPACE);
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void debugShowNamespaces() throws Exception {
         Element root = getRootElement();
 

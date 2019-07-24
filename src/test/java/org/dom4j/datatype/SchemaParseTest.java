@@ -13,8 +13,7 @@ import org.dom4j.io.SAXReader;
  * @version $Revision: 1.4 $
  */
 public class SchemaParseTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testParseSchema() throws Exception {
         DatatypeDocumentFactory factory = new DatatypeDocumentFactory();
 

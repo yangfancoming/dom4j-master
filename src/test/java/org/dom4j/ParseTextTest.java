@@ -13,8 +13,7 @@ import org.testng.annotations.BeforeClass;
 public class ParseTextTest extends AbstractTestCase {
     protected String xmlText =  "<root><author name='James'><location>Paris</location></author></root>";
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testDocument()  {
         assertTrue("Document is not null", document != null);
 

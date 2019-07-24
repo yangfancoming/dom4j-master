@@ -17,8 +17,7 @@ public class DocTypeTest extends AbstractTestCase {
     /** Input XML file to read */
     protected static final String INPUT_XML_FILE = "/xml/dtd/internal.xml";
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testDocType() throws Exception {
         SAXReader reader = new SAXReader();
         reader.setIncludeInternalDTDDeclarations(true);

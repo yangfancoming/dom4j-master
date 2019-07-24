@@ -75,8 +75,7 @@ public class DTDTest extends AbstractTestCase {
      */
     protected static final String DTD_SYSTEM_ID = "sample.dtd";
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
 
     /**
      * Test verifies correct identification of the internal DTD subset and

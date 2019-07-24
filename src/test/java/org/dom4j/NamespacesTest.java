@@ -18,8 +18,7 @@ import java.util.List;
  * @version $Revision: 1.4 $
  */
 public class NamespacesTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testNamespaces() throws Exception {
         testNamespaces(document);
         testNamespaces(saxRoundTrip(document));

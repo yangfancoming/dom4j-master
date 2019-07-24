@@ -16,8 +16,7 @@ public class MergeTextTest extends AbstractTestCase {
     /** Input XML file to read */
     private static final String INPUT_XML_FILE = "/xml/test/mergetext.xml";
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testNoAdjacentText() throws Exception {
         // After reading using SAXReader with mergeAdjacentText true,
         // no two Text objects should be adjacent to each other in the

@@ -22,8 +22,7 @@ import org.dom4j.DocTypeTest;
  */
 public class InternalEntityDeclTest extends AbstractTestCase {
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testToString() {
         InternalEntityDecl decl1 = new InternalEntityDecl("name", "value");
         InternalEntityDecl decl2 = new InternalEntityDecl("%name", "value");

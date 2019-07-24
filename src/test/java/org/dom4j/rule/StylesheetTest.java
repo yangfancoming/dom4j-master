@@ -31,8 +31,7 @@ public class StylesheetTest extends AbstractTestCase {
 
     protected Stylesheet stylesheet;
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testRules() throws Exception {
         for (int i = 0, size = templates.length; i < size; i++) {
             addTemplate(templates[i]);

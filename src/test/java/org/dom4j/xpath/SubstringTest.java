@@ -17,8 +17,7 @@ import java.util.List;
  * @version $Revision: 1.3 $
  */
 public class SubstringTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testSubstring() throws Exception {
         String[] results1 = {"1100", "1101"};
 

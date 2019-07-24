@@ -13,8 +13,7 @@ import java.util.List;
  * @version $Revision: 1.3 $
  */
 public class ParentTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testDocument() throws Exception {
         testParentRelationship(document.getRootElement());
     }

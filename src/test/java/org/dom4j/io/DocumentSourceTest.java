@@ -18,8 +18,7 @@ import java.io.StringWriter;
  */
 public class DocumentSourceTest extends AbstractTestCase {
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testBug555549() throws Exception {
         // simulate <cr><lf>
         String xml = "<field id='Description' type='textarea'>line1"

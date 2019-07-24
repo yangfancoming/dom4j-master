@@ -7,8 +7,7 @@ package org.dom4j;
  * @author <a href="mailto:maartenc@users.sourceforge.net">Maarten Coene </a>
  */
 public class AddAttributeTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testAddAttributeNormalValue() throws Exception {
         String testAttributeName = "testAtt";
         String testAttributeValue = "testValue";

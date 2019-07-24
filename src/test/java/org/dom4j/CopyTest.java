@@ -11,8 +11,7 @@ import java.util.List;
  * @version $Revision: 1.3 $
  */
 public class CopyTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testRoot() throws Exception {
         document.setName("doc1");
 

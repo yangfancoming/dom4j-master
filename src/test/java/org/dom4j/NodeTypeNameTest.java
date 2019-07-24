@@ -11,8 +11,7 @@ import java.util.Iterator;
  * @version $Revision: 1.4 $
  */
 public class NodeTypeNameTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testDocument() throws Exception {
         testDocument(getDocument());
     }

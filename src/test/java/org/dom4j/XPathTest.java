@@ -44,8 +44,7 @@ public class XPathTest extends AbstractTestCase {
             "//root/author[2]",
             "//root/author[3]"};
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testBug1116471() throws Exception {
         String xml = "<a><b>Water T &amp; D-46816</b></a>";
         String expected = "Water T & D-46816";

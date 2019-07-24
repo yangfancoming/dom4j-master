@@ -35,8 +35,7 @@ public class VariableTest extends AbstractTestCase {
 
     private Node authorNode;
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
         for (String path : paths) {
             testXPath(path);

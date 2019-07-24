@@ -26,8 +26,7 @@ public class XPathExamplesTest extends AbstractTestCase {
     /** factory for XPath, Patterns and nodes */
     protected DocumentFactory factory = DocumentFactory.getInstance();
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
         Document document = getDocument("/xml/test/xpath/tests.xml");
         Element root = document.getRootElement();

@@ -25,8 +25,7 @@ public class NumberTest extends AbstractTestCase {
             "10 + count(descendant::author) * 5",
             "10 + (count(descendant::author) * 5)"};
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
         Node element = document.selectSingleNode("//author");
         int size = paths.length;

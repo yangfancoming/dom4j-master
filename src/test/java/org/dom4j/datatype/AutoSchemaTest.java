@@ -17,8 +17,7 @@ import java.util.Calendar;
  * @version $Revision: 1.4 $
  */
 public class AutoSchemaTest extends AbstractDataTypeTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testIntAttribute() throws Exception {
         testNodes("//person/@x", Integer.class);
     }

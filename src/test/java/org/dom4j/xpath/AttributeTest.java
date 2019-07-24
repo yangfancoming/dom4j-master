@@ -16,8 +16,7 @@ public class AttributeTest extends AbstractTestCase {
     protected static String[] paths = {"attribute::*",
             "/root/author/attribute::*", "//attribute::*", "@name"};
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
       for (String path : paths) {
         testXPath(path);

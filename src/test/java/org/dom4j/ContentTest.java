@@ -13,8 +13,7 @@ import java.util.List;
 public class ContentTest extends AbstractTestCase {
     protected DocumentFactory factory = new DocumentFactory();
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testRoot() throws Exception {
         Element root = document.getRootElement();
         assertNotNull("Has root element", root);

@@ -12,8 +12,7 @@ public class ElementByIDTest extends AbstractTestCase {
     /** Input XML file to read */
     protected static final String INPUT_XML_FILE = "xml/test/elementByID.xml";
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testElementByID() throws Exception {
         String id = "message";
         Document document = getDocument(INPUT_XML_FILE);

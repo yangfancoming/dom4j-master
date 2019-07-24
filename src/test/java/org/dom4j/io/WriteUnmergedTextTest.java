@@ -21,8 +21,7 @@ public class WriteUnmergedTextTest extends AbstractTestCase {
             + "<TestEscapedEntities><TEXT>Test using &lt; "
             + "&amp; &gt;</TEXT></TestEscapedEntities>";
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public String readwriteText(OutputFormat outFormat,
             boolean mergeAdjacentText) throws Exception {
         StringWriter out = new StringWriter();

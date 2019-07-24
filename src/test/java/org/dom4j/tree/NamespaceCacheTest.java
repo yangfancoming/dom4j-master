@@ -15,8 +15,7 @@ public class NamespaceCacheTest extends AbstractTestCase {
 
     private static final int ITERATIONCOUNT = 10000;
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testGetSameNamespaceSingleThread() {
         long start = System.currentTimeMillis();
         SameNSTest test = new SameNSTest();

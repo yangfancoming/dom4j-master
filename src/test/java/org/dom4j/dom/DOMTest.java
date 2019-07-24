@@ -29,8 +29,7 @@ public class DOMTest extends AbstractTestCase {
     /** Characters. */
     private long characters;
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testCount() throws Exception {
         DOMWriter domWriter = new DOMWriter();
 

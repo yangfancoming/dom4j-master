@@ -17,8 +17,7 @@ import java.util.List;
 public class TextTest extends AbstractTestCase {
     protected static String[] paths = {"text()", "//author/text()"};
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
         int size = paths.length;
 

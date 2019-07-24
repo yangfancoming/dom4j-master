@@ -14,8 +14,7 @@ import org.dom4j.XPath;
 public class BadPathTest extends AbstractTestCase {
     private String[] paths = {"+", "/foo/bar/"};
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testBadPaths() throws Exception {
         for (int i = 0, size = paths.length; i < size; i++) {
             String path = paths[i];

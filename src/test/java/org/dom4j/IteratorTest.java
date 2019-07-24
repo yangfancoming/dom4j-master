@@ -31,8 +31,7 @@ public class IteratorTest extends AbstractTestCase {
         }
     }
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testElementCount() throws Exception {
         Element root = iterDocument.getRootElement();
         assertTrue("Has root element", root != null);

@@ -57,11 +57,7 @@ public abstract class AbstractTestCase {
         return reader.read(getFile(path));
     }
 
-    /**
-     * DOCUMENT ME!
-     *
-     * @return the root element of the document
-     */
+
     protected Element getRootElement() {
         Element root = document.getRootElement();
         Assert.assertNotNull(root, "Document has root element");

@@ -26,8 +26,7 @@ public class ValueOfTest extends AbstractTestCase {
             "name(/.)", "name(/child::node())", "name(/*)", ".", "..", "../*",
             "../child::node()", "/.", "/*", "*", "/child::node()"};
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
         Element root = document.getRootElement();
         List children = root.elements("author");

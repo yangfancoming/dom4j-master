@@ -13,8 +13,7 @@ import java.util.List;
  * @version $Revision: 1.3 $
  */
 public class IndexedElementTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
         testXPath("//author");
     }

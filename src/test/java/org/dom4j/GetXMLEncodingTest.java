@@ -15,8 +15,7 @@ import java.io.StringReader;
  * @version $Revision: 1.4 $
  */
 public class GetXMLEncodingTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXMLEncodingFromString() throws Exception {
         String xmlEnc = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root/>";
 

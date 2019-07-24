@@ -20,13 +20,10 @@ public class UserDataTest extends AbstractTestCase {
 
     private Object userData = new Double(1.23456);
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testSetData()  {
         Element root = getRootElement();
-
-        assertTrue("Element instanceof UserDataElement",
-                root instanceof UserDataElement);
+        assertTrue(root instanceof UserDataElement);
 
         root.setData(userData);
 

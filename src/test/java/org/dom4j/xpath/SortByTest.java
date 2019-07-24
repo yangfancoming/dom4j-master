@@ -16,8 +16,7 @@ import java.util.List;
  * @version $Revision: 1.3 $
  */
 public class SortByTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
         List list = document.selectNodes("//SPEAKER", "NAME");
 

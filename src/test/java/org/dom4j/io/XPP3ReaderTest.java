@@ -17,8 +17,7 @@ import java.io.StringWriter;
  * @author <a href="mailto:maartenc@sourceforge.net">Maarten Coene </a>
  */
 public class XPP3ReaderTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testRussian() throws Exception {
         File file = getFile("/xml/russArticle.xml");
         XPP3Reader xmlReader = new XPP3Reader();

@@ -12,8 +12,7 @@ import java.util.List;
  * @version $Revision: 1.3 $
  */
 public class AttributeDetachTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testDetachAttribute() throws Exception {
         List attributes = document.selectNodes("//@name");
 

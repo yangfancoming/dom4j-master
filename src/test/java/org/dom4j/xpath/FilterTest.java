@@ -20,8 +20,7 @@ public class FilterTest extends AbstractTestCase {
     protected static String[] paths = {".[name()='author']",
             ".[name()='XXXX']", ".[.='James Strachan']", ".[.='XXXX']"};
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
         int size = paths.length;
 

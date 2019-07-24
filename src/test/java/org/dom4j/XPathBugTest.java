@@ -11,8 +11,7 @@ import java.util.List;
  * @version $Revision: 1.4 $
  */
 public class XPathBugTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testXPaths() throws Exception {
         Document document = getDocument("/xml/rabo1ae.xml");
         Element root = (Element) document

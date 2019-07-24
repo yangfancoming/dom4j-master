@@ -12,8 +12,7 @@ import java.io.IOException;
  * @version $Revision: 1.4 $
  */
 public class XMLSpaceAttributeTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testWithTextTrimOn() throws Exception {
         String xmlString = "<top >"
                 + "<row><col>   This is a test!</col></row>"

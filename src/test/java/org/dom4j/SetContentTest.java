@@ -9,8 +9,7 @@ package org.dom4j;
  * @version $Revision: 1.3 $
  */
 public class SetContentTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testDocument() throws Exception {
         document.setName("doc1");
 

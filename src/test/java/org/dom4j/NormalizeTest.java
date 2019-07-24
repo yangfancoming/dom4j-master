@@ -11,8 +11,7 @@ import org.testng.annotations.BeforeClass;
  * @version $Revision: 1.3 $
  */
 public class NormalizeTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testNormalize() throws Exception {
         String text = document.asXML();
 

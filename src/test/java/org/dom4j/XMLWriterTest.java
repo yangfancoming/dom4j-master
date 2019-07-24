@@ -30,8 +30,7 @@ import java.io.StringWriter;
 public class XMLWriterTest extends AbstractTestCase {
     protected static final boolean VERBOSE = false;
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testBug1119733() throws Exception {
         Document doc = DocumentHelper
                 .parseText("<root><code>foo</code> bar</root>");

@@ -15,8 +15,7 @@ public class NullAttributesTest extends AbstractTestCase {
 
     protected Element element = document.addElement("root");
 
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testStringNames() throws Exception {
         element.addAttribute("foo", null);
 

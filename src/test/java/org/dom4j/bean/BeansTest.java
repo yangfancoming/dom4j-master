@@ -11,8 +11,7 @@ import org.dom4j.io.SAXReader;
  * @author <a href="mailto:maartenc@users.sourceforge.net">Maarten Coene </a>
  */
 public class BeansTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testReadXML() throws Exception {
         SAXReader reader = new SAXReader(BeanDocumentFactory.getInstance());
         getDocument("/xml/bean/gui.xml", reader);

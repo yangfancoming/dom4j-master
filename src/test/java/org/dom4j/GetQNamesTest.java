@@ -13,8 +13,7 @@ import java.util.List;
  * @version $Revision: 1.4 $
  */
 public class GetQNamesTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testQNames() throws Exception {
         DocumentFactory factory = new DocumentFactory();
 

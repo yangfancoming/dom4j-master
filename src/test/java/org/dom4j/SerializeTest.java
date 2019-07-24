@@ -18,8 +18,7 @@ import java.util.Map;
  * @version $Revision: 1.4 $
  */
 public class SerializeTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testSerializePeriodicTable() throws Exception {
         testSerialize("/xml/periodic_table.xml");
     }

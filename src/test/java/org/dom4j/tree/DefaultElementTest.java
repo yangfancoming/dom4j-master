@@ -12,8 +12,7 @@ import java.util.List;
  * @author Maarten Coene
  */
 public class DefaultElementTest extends AbstractTestCase {
-    // Test case(s)
-    // -------------------------------------------------------------------------
+
     public void testParentAfterSetContent() throws Exception {
             Document doc = DocumentHelper.parseText("<root>" + "<a>a</a>"
                 + "<b>b</b>" + "<x>x</x>" + "<d>d</d>" + "</root>");
