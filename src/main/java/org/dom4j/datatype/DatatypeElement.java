@@ -101,7 +101,7 @@ public class DatatypeElement extends DefaultElement implements
 
             if ((text != null) && (text.length() > 0)) {
                 if (datatype instanceof DatabindableDatatype) {
-                    DatabindableDatatype bind = (DatabindableDatatype) datatype;
+                    DatabindableDatatype bind = datatype;
                     data = bind.createJavaObject(text, this);
                 } else {
                     data = datatype.createValue(text, this);

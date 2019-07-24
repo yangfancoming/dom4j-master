@@ -20,10 +20,9 @@ public class AbstractDataTypeTestCase extends AbstractTestCase {
     // Implementation methods
     // -------------------------------------------------------------------------
     protected void testNodes(String xpath, Class type) {
+
         List<Node> list = document.selectNodes(xpath);
-
         assertTrue("Results are not empty", !list.isEmpty());
-
         for (Node node : list) {
             if (node instanceof Element) {
                 Element element = (Element) node;
@@ -32,18 +31,14 @@ public class AbstractDataTypeTestCase extends AbstractTestCase {
                 Attribute attribute = (Attribute) node;
                 testDataType(attribute, attribute.getData(), type);
             } else {
-                assertTrue("Did not find an attribute or element: " + node,
-                        false);
+                assertTrue("Did not find an attribute or element: " + node,false);
             }
         }
     }
 
     protected void testDataType(Node node, Object data, Class type) {
         assertTrue("Data object is not null", data != null);
-
-        assertTrue("Data object is of the correct type. Expected: "
-                + type.getName() + " and found: " + data.getClass().getName(),
-                type.isAssignableFrom(data.getClass()));
+        assertTrue("Data object is of the correct type. Expected: " + type.getName() + " and found: " + data.getClass().getName(),type.isAssignableFrom(data.getClass()));
     }
 }
 

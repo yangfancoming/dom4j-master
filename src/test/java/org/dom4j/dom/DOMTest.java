@@ -37,25 +37,18 @@ public class DOMTest extends AbstractTestCase {
         org.w3c.dom.Document domDocument = domWriter.write(document);
         long end = System.currentTimeMillis();
 
-        System.out.println("Converting to a W3C Document took: "
-                + (end - start) + " milliseconds");
-
+        System.out.println("Converting to a W3C Document took: "  + (end - start) + " milliseconds");
         traverse(domDocument);
+        log("elements: " + elements + " attributes: " + attributes + " characters: " + characters);
 
-        log("elements: " + elements + " attributes: " + attributes
-                + " characters: " + characters);
     }
 
     public void testNamespace() throws Exception {
         String xml = "<prefix:root xmlns:prefix=\"myuri\" />";
         SAXReader xmlReader = new SAXReader(DOMDocumentFactory.getInstance());
         DOMDocument d = (DOMDocument) xmlReader.read(new StringReader(xml));
-
-        assertEquals("namespace prefix not correct", "prefix", d
-                .getRootElement().getNamespace().getPrefix());
-        assertEquals("namespace uri not correct", "myuri", d.getRootElement()
-                .getNamespace().getURI());
-
+        assertEquals("namespace prefix not correct", "prefix", d.getRootElement().getNamespace().getPrefix());
+        assertEquals("namespace uri not correct", "myuri", d.getRootElement().getNamespace().getURI());
         System.out.println(d.asXML());
     }
 
@@ -134,9 +127,7 @@ public class DOMTest extends AbstractTestCase {
         if (node == null) {
             return;
         }
-
         int type = node.getNodeType();
-
         switch (type) {
             case Node.DOCUMENT_NODE: {
                 elements = 0;
@@ -155,9 +146,7 @@ public class DOMTest extends AbstractTestCase {
                 if (attrs != null) {
                     attributes += attrs.getLength();
                 }
-
                 NodeList children = node.getChildNodes();
-
                 if (children != null) {
                     int len = children.getLength();
 

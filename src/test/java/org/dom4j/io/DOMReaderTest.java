@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * DOCUMENT ME!
- * 
+ *
  * @author Maarten
  */
 public class DOMReaderTest extends AbstractTestCase {
@@ -27,8 +27,7 @@ public class DOMReaderTest extends AbstractTestCase {
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
-        org.w3c.dom.Document doc = builder.parse(new ByteArrayInputStream(xml
-                .getBytes()));
+        org.w3c.dom.Document doc = builder.parse(new ByteArrayInputStream(xml.getBytes()));
 
         DOMReader reader = new DOMReader();
         org.dom4j.Document dom4jDoc = reader.read(doc);

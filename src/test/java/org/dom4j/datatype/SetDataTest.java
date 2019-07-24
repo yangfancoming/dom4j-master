@@ -18,7 +18,7 @@ public class SetDataTest extends AbstractTestCase {
 	private DatatypeDocumentFactory factory = new DatatypeDocumentFactory();
 
 	@Test(expectedExceptions = IllegalArgumentException.class)
-	public void testAttribute() throws Exception {
+	public void testAttribute()  {
 		QName personName = factory.createQName("person");
 		QName ageName = factory.createQName("age");
 
@@ -58,7 +58,7 @@ public class SetDataTest extends AbstractTestCase {
 	}
 
 	@Test(expectedExceptions = IllegalArgumentException.class)
-	public void testAttributeWithNamespace() throws Exception {
+	public void testAttributeWithNamespace()  {
 		QName personName = factory.createQName("person", "t", "urn://testing");
 		QName ageName = factory.createQName("age", "t", "urn://testing");
 
@@ -91,7 +91,7 @@ public class SetDataTest extends AbstractTestCase {
 	}
 
 	@Test(expectedExceptions = IllegalArgumentException.class)
-	public void testElement() throws Exception {
+	public void testElement()  {
 		QName personName = factory.createQName("person");
 		QName numberOfCarsName = factory.createQName("numberOfCars");
 

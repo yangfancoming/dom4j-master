@@ -20,6 +20,7 @@ import java.io.File;
  */
 @Test
 public abstract class AbstractTestCase {
+
     protected Document document;
 
     @BeforeSuite
@@ -52,8 +53,7 @@ public abstract class AbstractTestCase {
         return getDocument(path, new SAXReader());
     }
 
-    protected Document getDocument(String path, SAXReader reader)
-            throws Exception {
+    protected Document getDocument(String path, SAXReader reader)throws Exception {
         return reader.read(getFile(path));
     }
 

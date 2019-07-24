@@ -19,121 +19,120 @@ import java.util.Calendar;
  */
 public class DataTypesTest extends AbstractDataTypeTestCase {
 
-    public void testgMonthDay() throws Exception {
+    public void testgMonthDay()  {
         testNodes("//gMonthDayTag", Calendar.class);
     }
 
-    public void testgDay() throws Exception {
+    public void testgDay()  {
         testNodes("//gDayTag", Calendar.class);
     }
 
-    public void testgMonth() throws Exception {
+    public void testgMonth()  {
         testNodes("//gMonthTag", Calendar.class);
     }
 
-    public void testDate() throws Exception {
+    public void testDate()  {
         testNodes("//dateTag", Calendar.class);
     }
 
-    public void testTime() throws Exception {
+    public void testTime()  {
         testNodes("//timeTag", Calendar.class);
     }
 
-    public void testDateTime() throws Exception {
+    public void testDateTime()  {
         testNodes("//dateTimeTag", Calendar.class);
     }
 
-    public void testgYearMonth() throws Exception {
+    public void testgYearMonth()  {
         testNodes("//gYearMonthTag", Calendar.class);
     }
 
-    public void testgYear() throws Exception {
+    public void testgYear()  {
         testNodes("//gYearTag", Calendar.class);
     }
 
-    public void testBoolean() throws Exception {
+    public void testBoolean()  {
         testNodes("//booleanTag", Boolean.class);
     }
 
-    public void testBase64Binary() throws Exception {
+    public void testBase64Binary()  {
         testNodes("//base64BinaryTag", byte[].class);
     }
 
-    public void testHexBinary() throws Exception {
+    public void testHexBinary()  {
         testNodes("//hexBinaryTag", byte[].class);
     }
 
     // Number types
-    public void testFloat() throws Exception {
+    public void testFloat()  {
         testNodes("//floatTag", Float.class);
     }
 
-    public void testDouble() throws Exception {
+    public void testDouble()  {
         testNodes("//doubleTag", Double.class);
     }
 
-    public void testDecimal() throws Exception {
+    public void testDecimal()  {
         testNodes("//decimalTag", BigDecimal.class);
     }
 
-    public void testInteger() throws Exception {
+    public void testInteger()  {
         testNodes("//integerTag", BigInteger.class);
     }
 
-    public void testNonPositiveInteger() throws Exception {
+    public void testNonPositiveInteger()  {
         testNodes("//nonPositiveIntegerTag", BigInteger.class);
     }
 
-    public void testNegativeInteger() throws Exception {
+    public void testNegativeInteger()  {
         testNodes("//negativeIntegerTag", BigInteger.class);
     }
 
-    public void testLong() throws Exception {
+    public void testLong()  {
         testNodes("//longTag", Long.class);
     }
 
-    public void testInt() throws Exception {
+    public void testInt()  {
         testNodes("//intTag", Integer.class);
     }
 
-    public void testShort() throws Exception {
+    public void testShort()  {
         testNodes("//shortTag", Short.class);
     }
 
-    public void testByte() throws Exception {
+    public void testByte()  {
         testNodes("//byteTag", Byte.class);
     }
 
-    public void testNonNegativeInteger() throws Exception {
+    public void testNonNegativeInteger()  {
         testNodes("//nonNegativeIntegerTag", BigInteger.class);
     }
 
-    public void testUnsignedLong() throws Exception {
+    public void testUnsignedLong()  {
         testNodes("//unsignedLongTag", BigInteger.class);
     }
 
-    public void testUnsignedInt() throws Exception {
+    public void testUnsignedInt()  {
         testNodes("//unsignedIntTag", Long.class);
     }
 
-    public void testUnsignedShort() throws Exception {
+    public void testUnsignedShort()  {
         testNodes("//unsignedShortTag", Integer.class);
     }
 
-    public void testUnsignedByte() throws Exception {
+    public void testUnsignedByte()  {
         testNodes("//unsignedByteTag", Short.class);
     }
 
-    public void testPositiveInteger() throws Exception {
+    public void testPositiveInteger()  {
         testNodes("//positiveIntegerTag", BigInteger.class);
     }
 
     // Implementation methods
     // -------------------------------------------------------------------------
     @BeforeClass
-    public void setUp() throws Exception {
+    public void setUp() throws Exception  {
         super.setUp();
-
         DocumentFactory factory = DatatypeDocumentFactory.getInstance();
         SAXReader reader = new SAXReader(factory);
         document = getDocument("/xml/test/schema/test.xml", reader);
