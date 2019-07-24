@@ -551,14 +551,11 @@ public interface Element extends Branch {
 	List<Element> elements();
 
 	/**
-	 * Returns the elements contained in this element with the given local name
-	 * and any namespace. If no elements are found then this method returns an
-	 * empty list. The list is backed by the element such that changes to the
-	 * list will be reflected in the element though the reverse is not the case.
-	 *
+	 * Returns the elements contained in this element with the given local name and any namespace.
+	 *  If no elements are found then this method returns an empty list.
+	 *  The list is backed by the element such that changes to the list will be reflected in the element though the reverse is not the case.
 	 * @param name DOCUMENT ME!
-	 * @return a list of all the elements in this element for the given local
-	 * name
+	 * @return a list of all the elements in this element for the given local name
 	 */
 	List<Element> elements(String name);
 

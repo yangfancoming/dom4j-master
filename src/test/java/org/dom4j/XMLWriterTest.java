@@ -28,20 +28,18 @@ import java.io.StringWriter;
  * @version $Revision: 1.7 $
  */
 public class XMLWriterTest extends AbstractTestCase {
+
     protected static final boolean VERBOSE = false;
 
 
     public void testBug1119733() throws Exception {
-        Document doc = DocumentHelper
-                .parseText("<root><code>foo</code> bar</root>");
-        
+        Document doc = DocumentHelper.parseText("<root><code>foo</code> bar</root>");
         StringWriter out = new StringWriter();
         XMLWriter writer = new XMLWriter(out, OutputFormat.createPrettyPrint());
         writer.write(doc);
         writer.close();
         
         String xml = out.toString();
-
         System.out.println(xml);
         assertEquals("whitespace problem", -1, xml.indexOf("</code>bar"));
     }
@@ -82,9 +80,7 @@ public class XMLWriterTest extends AbstractTestCase {
             log(text);
             log("]. Done");
         }
-
-        assertTrue("Output text is bigger than 10 characters",
-                text.length() > 10);
+        assertTrue("Output text is bigger than 10 characters",text.length() > 10);
     }
 
     public void testEncodingFormats() throws Exception {
@@ -178,9 +174,6 @@ public class XMLWriterTest extends AbstractTestCase {
 
     /**
      * This test harness was supplied by Lari Hotari
-     * 
-     * @throws Exception
-     *             DOCUMENT ME!
      */
     public void testContentHandler() throws Exception {
         StringWriter out = new StringWriter();

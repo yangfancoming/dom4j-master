@@ -36,9 +36,7 @@ public class SAXReaderTest extends AbstractTestCase {
     public void testRussian() throws Exception {
         Document doc = getDocument("/xml/russArticle.xml");
         assertEquals("encoding not correct", "koi8-r", doc.getXMLEncoding());
-
         Element el = doc.getRootElement();
-
         StringWriter writer = new StringWriter();
         XMLWriter xmlWriter = new XMLWriter(writer);
         OutputFormat format = OutputFormat.createPrettyPrint();

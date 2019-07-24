@@ -492,7 +492,6 @@ public class OutputFormat implements Cloneable {
      * A static helper method to create the default pretty printing format. This
      * format consists of an indent of 2 spaces, newlines after each element and
      * all other whitespace trimmed, and XMTML is false.
-     * 
      * @return DOCUMENT ME!
      */
     public static OutputFormat createPrettyPrint() {
@@ -501,7 +500,6 @@ public class OutputFormat implements Cloneable {
         format.setNewlines(true);
         format.setTrimText(true);
         format.setPadText(true);
-
         return format;
     }
 

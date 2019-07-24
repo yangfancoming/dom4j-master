@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * <code>Branch</code> interface defines the common behaviour for Nodes which
+ * Branch interface defines the common behaviour for Nodes which
  * can contain child nodes (content) such as XML elements and documents. This
  * interface allows both elements and documents to be treated in a polymorphic
  * manner when changing or navigating child nodes (content).
@@ -17,10 +17,10 @@ import java.util.List;
 @SuppressWarnings("unused")
 public interface Branch extends Node {
 	/**
-	 * Returns the <code>Node</code> at the specified index position.
+	 * Returns the Node at the specified index position.
 	 *
 	 * @param index the index of the node to return.
-	 * @return the <code>Node</code> at the specified position.
+	 * @return the Node at the specified position.
 	 * @throws IndexOutOfBoundsException if the index is out of range (index &lt; 0 || index &gt;=
 	 *                                   {@link Branch#nodeCount()}).
 	 */
@@ -37,7 +37,7 @@ public interface Branch extends Node {
 	int indexOf(Node node);
 
 	/**
-	 * Returns the number of <code>Node</code> instances that this branch
+	 * Returns the number of Node instances that this branch
 	 * contains.
 	 *
 	 * @return the number of nodes this branch contains
@@ -57,11 +57,11 @@ public interface Branch extends Node {
 	/**
 	 * Returns the content nodes of this branch as a backed {@link List}so that
 	 * the content of this branch may be modified directly using the
-	 * {@link List}interface. The <code>List</code> is backed by the
-	 * <code>Branch</code> so that changes to the list are reflected in the
+	 * {@link List}interface. The List is backed by the
+	 * Branch so that changes to the list are reflected in the
 	 * branch and vice versa.
 	 *
-	 * @return the nodes that this branch contains as a <code>List</code>
+	 * @return the nodes that this branch contains as a List
 	 */
 	List<Node> content();
 
@@ -73,8 +73,8 @@ public interface Branch extends Node {
 	Iterator<Node> nodeIterator();
 
 	/**
-	 * Sets the contents of this branch as a <code>List</code> of
-	 * <code>Node</code> instances.
+	 * Sets the contents of this branch as a List of
+	 * Node instances.
 	 *
 	 * @param content is the list of nodes to use as the content for this branch.
 	 */
@@ -90,7 +90,7 @@ public interface Branch extends Node {
 	void appendContent(Branch branch);
 
 	/**
-	 * Clears the content for this branch, removing any <code>Node</code>
+	 * Clears the content for this branch, removing any Node
 	 * instances this branch may contain.
 	 */
 	void clearContent();
@@ -130,30 +130,28 @@ public interface Branch extends Node {
 	void setProcessingInstructions(List<ProcessingInstruction> listOfPIs);
 
 	/**
-	 * Adds a new <code>Element</code> node with the given name to this branch
-	 * and returns a reference to the new node.
-	 *
-	 * @param name is the name for the <code>Element</code> node.
-	 * @return the newly added <code>Element</code> node.
+	 * Adds a new Element node with the given name to this branch and returns a reference to the new node.
+	 * @param name is the name for the Element node.
+	 * @return the newly added Element node.
 	 */
 	Element addElement(String name);
 
 	/**
-	 * Adds a new <code>Element</code> node with the given {@link QName}to
+	 * Adds a new Element node with the given {@link QName}to
 	 * this branch and returns a reference to the new node.
 	 *
-	 * @param qname is the qualified name for the <code>Element</code> node.
-	 * @return the newly added <code>Element</code> node.
+	 * @param qname is the qualified name for the Element node.
+	 * @return the newly added Element node.
 	 */
 	Element addElement(QName qname);
 
 	/**
-	 * Adds a new <code>Element</code> node with the given qualified name and
+	 * Adds a new Element node with the given qualified name and
 	 * namespace URI to this branch and returns a reference to the new node.
 	 *
 	 * @param qualifiedName is the fully qualified name of the Element
 	 * @param namespaceURI  is the URI of the namespace to use
-	 * @return the newly added <code>Element</code> node.
+	 * @return the newly added Element node.
 	 */
 	Element addElement(String qualifiedName, String namespaceURI);
 
@@ -166,7 +164,7 @@ public interface Branch extends Node {
 	boolean removeProcessingInstruction(String target);
 
 	/**
-	 * Adds the given <code>Node</code> or throws {@link IllegalAddException}
+	 * Adds the given Node or throws {@link IllegalAddException}
 	 * if the given node is not of a valid type. This is a polymorphic method
 	 * which will call the typesafe method for the node type such as
 	 * add(Element) or add(Comment).
@@ -176,8 +174,8 @@ public interface Branch extends Node {
 	void add(Node node);
 
 	/**
-	 * Adds the given <code>Comment</code> to this branch. If the given node
-	 * already has a parent defined then an <code>IllegalAddException</code>
+	 * Adds the given Comment to this branch. If the given node
+	 * already has a parent defined then an IllegalAddException
 	 * will be thrown.
 	 *
 	 * @param comment is the comment to be added
@@ -185,8 +183,8 @@ public interface Branch extends Node {
 	void add(Comment comment);
 
 	/**
-	 * Adds the given <code>Element</code> to this branch. If the given node
-	 * already has a parent defined then an <code>IllegalAddException</code>
+	 * Adds the given Element to this branch. If the given node
+	 * already has a parent defined then an IllegalAddException
 	 * will be thrown.
 	 *
 	 * @param element is the element to be added
@@ -194,16 +192,16 @@ public interface Branch extends Node {
 	void add(Element element);
 
 	/**
-	 * Adds the given <code>ProcessingInstruction</code> to this branch. If
+	 * Adds the given ProcessingInstruction to this branch. If
 	 * the given node already has a parent defined then an
-	 * <code>IllegalAddException</code> will be thrown.
+	 * IllegalAddException will be thrown.
 	 *
 	 * @param pi is the processing instruction to be added
 	 */
 	void add(ProcessingInstruction pi);
 
 	/**
-	 * Removes the given <code>Node</code> if the node is an immediate child
+	 * Removes the given Node if the node is an immediate child
 	 * of this branch. If the given node is not an immediate child of this
 	 * branch then the {@link Node#detach()}method should be used instead. This
 	 * is a polymorphic method which will call the typesafe method for the node
@@ -215,7 +213,7 @@ public interface Branch extends Node {
 	boolean remove(Node node);
 
 	/**
-	 * Removes the given <code>Comment</code> if the node is an immediate
+	 * Removes the given Comment if the node is an immediate
 	 * child of this branch. If the given node is not an immediate child of this
 	 * branch then the {@link Node#detach()}method should be used instead.
 	 *
@@ -225,7 +223,7 @@ public interface Branch extends Node {
 	boolean remove(Comment comment);
 
 	/**
-	 * Removes the given <code>Element</code> if the node is an immediate
+	 * Removes the given Element if the node is an immediate
 	 * child of this branch. If the given node is not an immediate child of this
 	 * branch then the {@link Node#detach()}method should be used instead.
 	 *
@@ -235,7 +233,7 @@ public interface Branch extends Node {
 	boolean remove(Element element);
 
 	/**
-	 * Removes the given <code>ProcessingInstruction</code> if the node is an
+	 * Removes the given ProcessingInstruction if the node is an
 	 * immediate child of this branch. If the given node is not an immediate
 	 * child of this branch then the {@link Node#detach()}method should be used
 	 * instead.
@@ -246,19 +244,19 @@ public interface Branch extends Node {
 	boolean remove(ProcessingInstruction pi);
 
 	/**
-	 * Puts all <code>Text</code> nodes in the full depth of the sub-tree
-	 * underneath this <code>Node</code>, including attribute nodes, into a
+	 * Puts all Text nodes in the full depth of the sub-tree
+	 * underneath this Node, including attribute nodes, into a
 	 * "normal" form where only structure (e.g., elements, comments, processing
 	 * instructions, CDATA sections, and entity references) separates
-	 * <code>Text</code> nodes, i.e., there are neither adjacent
-	 * <code>Text</code> nodes nor empty <code>Text</code> nodes. This can
+	 * Text nodes, i.e., there are neither adjacent
+	 * Text nodes nor empty Text nodes. This can
 	 * be used to ensure that the DOM view of a document is the same as if it
 	 * were saved and re-loaded, and is useful when operations (such as XPointer
 	 * lookups) that depend on a particular document tree structure are to be
-	 * used.In cases where the document contains <code>CDATASections</code>,
+	 * used.In cases where the document contains CDATASections,
 	 * the normalize operation alone may not be sufficient, since XPointers do
-	 * not differentiate between <code>Text</code> nodes and
-	 * <code>CDATASection</code> nodes.
+	 * not differentiate between Text nodes and
+	 * CDATASection nodes.
 	 *
 	 * @since DOM Level 2
 	 */

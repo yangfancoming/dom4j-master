@@ -6,35 +6,31 @@ import java.util.List;
 
 /**
  * A test harness to test the content API in DOM4J
- * 
  * @author <a href="mailto:james.strachan@metastuff.com">James Strachan </a>
  * @version $Revision: 1.3 $
  */
 public class ContentTest extends AbstractTestCase {
+
     protected DocumentFactory factory = new DocumentFactory();
 
-
-    public void testRoot() throws Exception {
+    public void testRoot() {
         Element root = document.getRootElement();
-        assertNotNull("Has root element", root);
+        assertNotNull( root);
 
         List<Element> authors = root.elements("author");
-        assertNotNull("Root has children", authors);
-        assertTrue("Root has children", authors.size() == 2);
+        assertNotNull(authors);
+        assertTrue(authors.size() == 2);
 
         Element author1 = authors.get(0);
         Element author2 = authors.get(1);
 
-        assertTrue("Author1 is James", author1.attributeValue("name").equals(
-                "James"));
-        assertTrue("Author2 is Bob", author2.attributeValue("name").equals(
-                "Bob"));
-
+        assertTrue("Author1 is James", author1.attributeValue("name").equals("James"));
+        assertTrue("Author2 is Bob", author2.attributeValue("name").equals( "Bob"));
         testGetAttributes(author1);
         testGetAttributes(author2);
     }
 
-    public void testContent() throws Exception {
+    public void testContent()  {
         Element root = document.getRootElement();
         assertNotNull("Has root element", root);
 
@@ -51,7 +47,7 @@ public class ContentTest extends AbstractTestCase {
         assertTrue("Iteration completed", iterated);
     }
 
-    public void testGetNode() throws Exception {
+    public void testGetNode()  {
         Element root = document.getRootElement();
         assertNotNull("Has root element", root);
 
@@ -69,7 +65,7 @@ public class ContentTest extends AbstractTestCase {
         assertTrue("Iteration completed", iterated);
     }
 
-    public void testGetXPathNode() throws Exception {
+    public void testGetXPathNode()  {
         Element root = document.getRootElement();
         assertNotNull("Has root element", root);
 
@@ -123,7 +119,7 @@ public class ContentTest extends AbstractTestCase {
         assertTrue("Second element is an element", root instanceof Element);
     }
 
-    public void testAddingInTheMiddle() throws Exception {
+    public void testAddingInTheMiddle()  {
         Document doc = factory.createDocument();
         Element root = doc.addElement("html");
         Element header = root.addElement("header");
@@ -141,7 +137,7 @@ public class ContentTest extends AbstractTestCase {
         assertTrue(list.get(2) == footer);
     }
 
-    public void testAddAtIndex() throws Exception {
+    public void testAddAtIndex()  {
         Document doc = factory.createDocument();
         Element root = doc.addElement("html");
         Element header = root.addElement("header");
@@ -168,7 +164,7 @@ public class ContentTest extends AbstractTestCase {
         assertEquals("bar", body.node(1).getName());
     }
 
-    public void testAddAtIndex2() throws Exception {
+    public void testAddAtIndex2()  {
         Document doc = factory.createDocument();
         Element parent = doc.addElement("parent");
         Element child = parent.addElement("child");
@@ -187,7 +183,7 @@ public class ContentTest extends AbstractTestCase {
 
     // Implementation methods
     // -------------------------------------------------------------------------
-    protected void testGetAttributes(Element author) throws Exception {
+    protected void testGetAttributes(Element author)  {
         String definedName = "name";
         String undefinedName = "undefined-attribute-name";
         String defaultValue = "** Default Value **";
