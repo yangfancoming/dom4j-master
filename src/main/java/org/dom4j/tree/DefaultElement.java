@@ -673,11 +673,9 @@ public class DefaultElement extends AbstractElement {
 
     public Attribute attribute(int index) {
         final Object attributesShadow = this.attributes;
-
         if (attributesShadow instanceof List) {
             List<Attribute> list = (List<Attribute>) attributesShadow;
-
-            return (Attribute) list.get(index);
+            return list.get(index);
         } else if ((attributesShadow != null) && (index == 0)) {
             return (Attribute) attributesShadow;
         } else {

@@ -60,24 +60,21 @@ public class XPathTest extends AbstractTestCase {
         assertEquals("xpath result not correct", expected, result2);        
     }
     
-    public void testXPaths() throws Exception {
+    public void testXPaths() {
         int size = paths.length;
-
         for (int i = 0; i < size; i++) {
             testXPath(paths[i]);
         }
     }
 
-    public void testCreateXPathBug() throws Exception {
+    public void testCreateXPathBug()  {
         Element element = new DefaultElement("foo");
         XPath xpath = element.createXPath("//bar");
-
         assertTrue(("created a valid XPath: " + xpath) != null);
     }
 
     public void testBug857704() throws Exception {
-        Document doc = DocumentHelper
-                .parseText("<foo xmlns:bar='http://blort'/>");
+        Document doc = DocumentHelper.parseText("<foo xmlns:bar='http://blort'/>");
         doc.selectNodes("//*[preceding-sibling::*]"); // shouldn't throw NPE
     }
 

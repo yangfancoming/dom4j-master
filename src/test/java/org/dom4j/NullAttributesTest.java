@@ -10,13 +10,11 @@ package org.dom4j;
  */
 public class NullAttributesTest extends AbstractTestCase {
     protected DocumentFactory factory = DocumentFactory.getInstance();
-
     protected Document document = factory.createDocument();
-
     protected Element element = document.addElement("root");
 
 
-    public void testStringNames() throws Exception {
+    public void testStringNames()  {
         element.addAttribute("foo", null);
 
         Attribute attribute = element.attribute("foo");
@@ -31,7 +29,7 @@ public class NullAttributesTest extends AbstractTestCase {
         assertTrue(attribute == null);
     }
 
-    public void testQNames() throws Exception {
+    public void testQNames()  {
         QName bar = QName.get("bar");
 
         element.addAttribute(bar, null);
@@ -48,7 +46,7 @@ public class NullAttributesTest extends AbstractTestCase {
         assertTrue(attribute == null);
     }
 
-    public void testAttributes() throws Exception {
+    public void testAttributes()  {
         Attribute attribute = factory.createAttribute(element, "v", null);
 
         assertTrue(attribute.getText() == null);

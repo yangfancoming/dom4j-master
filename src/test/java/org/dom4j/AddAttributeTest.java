@@ -8,7 +8,7 @@ package org.dom4j;
  */
 public class AddAttributeTest extends AbstractTestCase {
 
-    public void testAddAttributeNormalValue() throws Exception {
+    public void testAddAttributeNormalValue()  {
         String testAttributeName = "testAtt";
         String testAttributeValue = "testValue";
 
@@ -20,11 +20,10 @@ public class AddAttributeTest extends AbstractTestCase {
         authorEl.addAttribute(testAttributeName, testAttributeValue);
 
         assertEquals(3, authorEl.attributeCount());
-        assertEquals(testAttributeValue, authorEl
-                .attributeValue(testAttributeName));
+        assertEquals(testAttributeValue, authorEl.attributeValue(testAttributeName));
     }
 
-    public void testAddAttributeNullValue() throws Exception {
+    public void testAddAttributeNullValue()  {
         String testAttributeName = "location";
         String testAttributeValue = null;
 

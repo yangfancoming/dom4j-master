@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * <code>XPath</code> represents an XPath expression after it has been parsed
+ * XPath represents an XPath expression after it has been parsed
  * from a String.
  *
  * @author <a href="mailto:james.strachan@metastuff.com">James Strachan </a>
@@ -19,7 +19,7 @@ import java.util.Map;
 @SuppressWarnings("unused")
 public interface XPath extends NodeFilter {
 	/**
-	 * <code>getText</code> will return the textual version of the XPath
+	 * getText will return the textual version of the XPath
 	 * expression.
 	 *
 	 * @return the textual format of the XPath expression.
@@ -27,7 +27,7 @@ public interface XPath extends NodeFilter {
 	String getText();
 
 	/**
-	 * <code>matches</code> returns true if the given node matches the XPath
+	 * matches returns true if the given node matches the XPath
 	 * expression. To be more precise when evaluating this XPath expression on
 	 * the given node the result set must include the node.
 	 *
@@ -37,7 +37,7 @@ public interface XPath extends NodeFilter {
 	boolean matches(Node node);
 
 	/**
-	 * <code>evaluate</code> evaluates an XPath expression and returns the
+	 * evaluate evaluates an XPath expression and returns the
 	 * result as an {@link Object}. The object returned can either be a {@link
 	 * List} of {@link Node}instances, a {@link Node}instance, a {@link
 	 * String} or a {@link Number}instance depending on the XPath expression.
@@ -51,7 +51,7 @@ public interface XPath extends NodeFilter {
 	Object evaluate(Object context);
 
 	/**
-	 * <code>selectObject</code> evaluates an XPath expression and returns the
+	 * selectObject evaluates an XPath expression and returns the
 	 * result as an {@link Object}. The object returned can either be a {@link
 	 * List} of {@link Node}instances, a {@link Node}instance, a {@link
 	 * String} or a {@link Number}instance depending on the XPath expression.
@@ -67,33 +67,30 @@ public interface XPath extends NodeFilter {
 	Object selectObject(Object context);
 
 	/**
-	 * <code>selectNodes</code> performs this XPath expression on the given
-	 * {@link Node}or {@link List}of {@link Node}s instances appending all
-	 * the results together into a single list.
-	 *
-	 * @param context is either a node or a list of nodes on which to evalute the
-	 *                XPath
+	 * selectNodes performs this XPath expression on the given
+	 * {@link Node}or {@link List}of {@link Node}s instances appending all the results together into a single list.
+	 * @param context is either a node or a list of nodes on which to evalute the  XPath
 	 * @return the results of all the XPath evaluations as a single list
 	 */
 	List<Node> selectNodes(Object context);
 
 	/**
-	 * <code>selectNodes</code> evaluates the XPath expression on the given
+	 * selectNodes evaluates the XPath expression on the given
 	 * {@link Node}or {@link List}of {@link Node}s and returns the result as
-	 * a <code>List</code> of <code>Node</code> s sorted by the sort XPath
+	 * a List of Node s sorted by the sort XPath
 	 * expression.
 	 *
 	 * @param context   is either a node or a list of nodes on which to evalute the
 	 *                  XPath
 	 * @param sortXPath is the XPath expression to sort by
-	 * @return a list of <code>Node</code> instances
+	 * @return a list of Node instances
 	 */
 	List<Node> selectNodes(Object context, XPath sortXPath);
 
 	/**
-	 * <code>selectNodes</code> evaluates the XPath expression on the given
+	 * selectNodes evaluates the XPath expression on the given
 	 * {@link Node}or {@link List}of {@link Node}s and returns the result as
-	 * a <code>List</code> of <code>Node</code> s sorted by the sort XPath
+	 * a List of Node s sorted by the sort XPath
 	 * expression.
 	 *
 	 * @param context   is either a node or a list of nodes on which to evalute the
@@ -102,23 +99,23 @@ public interface XPath extends NodeFilter {
 	 * @param distinct  specifies whether or not duplicate values of the sort
 	 *                  expression are allowed. If this parameter is true then only
 	 *                  distinct sort expressions values are included in the result
-	 * @return a list of <code>Node</code> instances
+	 * @return a list of Node instances
 	 */
 	List<Node> selectNodes(Object context, XPath sortXPath, boolean distinct);
 
 	/**
-	 * <code>selectSingleNode</code> evaluates this XPath expression on the
+	 * selectSingleNode evaluates this XPath expression on the
 	 * given {@link Node}or {@link List}of {@link Node}s and returns the
-	 * result as a single <code>Node</code> instance.
+	 * result as a single Node instance.
 	 *
 	 * @param context is either a node or a list of nodes on which to evalute the
 	 *                XPath
-	 * @return a single matching <code>Node</code> instance
+	 * @return a single matching Node instance
 	 */
 	Node selectSingleNode(Object context);
 
 	/**
-	 * <code>valueOf</code> evaluates this XPath expression and returns the
+	 * valueOf evaluates this XPath expression and returns the
 	 * textual representation of the results using the XPath string() function.
 	 *
 	 * @param context is either a node or a list of nodes on which to evalute the
@@ -128,7 +125,7 @@ public interface XPath extends NodeFilter {
 	String valueOf(Object context);
 
 	/**
-	 * <code>numberValueOf</code> evaluates an XPath expression and returns
+	 * numberValueOf evaluates an XPath expression and returns
 	 * the numeric value of the XPath expression if the XPath expression results
 	 * is a number, or null if the result is not a number.
 	 *
@@ -144,20 +141,19 @@ public interface XPath extends NodeFilter {
 	 * evaluated against a given context.
 	 *
 	 * The boolean-value of the expression is determined per the
-	 * <code>boolean(..)</code> core function as defined in the XPath
+	 * boolean(..) core function as defined in the XPath
 	 * specification. This means that an expression that selects zero nodes will
-	 * return <code>false</code>, while an expression that selects
-	 * one-or-more nodes will return <code>true</code>.
+	 * return false, while an expression that selects
+	 * one-or-more nodes will return true.
 	 *
-	 * @param context The node, nodeset or Context object for evaluation. This value
-	 *                can be null
+	 * @param context The node, nodeset or Context object for evaluation. This value can be null
 	 * @return The boolean-value interpretation of this expression.
 	 * @since 1.5
 	 */
 	boolean booleanValueOf(Object context);
 
 	/**
-	 * <code>sort</code> sorts the given List of Nodes using this XPath
+	 * sort sorts the given List of Nodes using this XPath
 	 * expression as a {@link java.util.Comparator}.
 	 *
 	 * @param list is the list of Nodes to sort
@@ -165,7 +161,7 @@ public interface XPath extends NodeFilter {
 	void sort(List<Node> list);
 
 	/**
-	 * <code>sort</code> sorts the given List of Nodes using this XPath
+	 * sort sorts the given List of Nodes using this XPath
 	 * expression as a {@link java.util.Comparator}and optionally removing
 	 * duplicates.
 	 *

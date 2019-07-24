@@ -111,8 +111,7 @@ public final class DocumentHelper {
      * @throws InvalidXPathException
      *             if the XPath expression is invalid
      */
-    public static XPath createXPath(String xpathExpression)
-            throws InvalidXPathException {
+    public static XPath createXPath(String xpathExpression)  throws InvalidXPathException {
         return getDocumentFactory().createXPath(xpathExpression);
     }
 

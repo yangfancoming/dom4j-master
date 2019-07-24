@@ -9,6 +9,7 @@ import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.XMLWriter;
+import org.testng.annotations.Test;
 
 /**
  * This class demonstrate the use of dom4j in Applets. Note that applets are not
@@ -34,6 +35,7 @@ public class SimpleAppletDemo extends Applet {
     /**
      * Called after init. Demonstrates the simplicity of parsing in applets.
      */
+    @Test
     public void start() {
         try {
             demoDocument = DocumentHelper.parseText(DEMO_XML);
@@ -43,7 +45,6 @@ public class SimpleAppletDemo extends Applet {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
         demoXPath();
         repaint();
     }
@@ -53,11 +54,9 @@ public class SimpleAppletDemo extends Applet {
      */
     private void demoXPath() {
         this.buffer = new StringBuffer("The name of the servlet is :");
-        this.buffer.append(demoDocument
-                .valueOf("/web-app/servlet[1]/servlet-name"));
+        this.buffer.append(demoDocument.valueOf("/web-app/servlet[1]/servlet-name"));
         this.buffer.append(" and the class is ");
-        this.buffer.append(demoDocument
-                .valueOf("/web-app/servlet[1]/servlet-class"));
+        this.buffer.append(demoDocument.valueOf("/web-app/servlet[1]/servlet-class"));
     }
 
     /**

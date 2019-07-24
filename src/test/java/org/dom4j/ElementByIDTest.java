@@ -18,8 +18,7 @@ public class ElementByIDTest extends AbstractTestCase {
         Document document = getDocument(INPUT_XML_FILE);
 
         // test XPath
-        Element element = (Element) document.selectSingleNode("//*[@ID='" + id
-                + "']");
+        Element element = (Element) document.selectSingleNode("//*[@ID='" + id  + "']");
         assertTrue("Found element by ID: " + id, element != null);
         assertEquals("ID is equal", id, element.attributeValue("ID"));
 

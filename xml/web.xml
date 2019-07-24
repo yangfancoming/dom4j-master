@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <web-app>
+
     <servlet>
         <servlet-name>snoop</servlet-name>
         <servlet-class>SnoopServlet</servlet-class>
     </servlet>
+
     <servlet>
         <servlet-name>file</servlet-name>
         <servlet-class>ViewFile</servlet-class>
@@ -15,6 +17,7 @@
             </description>
         </init-param>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>snoop</servlet-name>
         <url-pattern>/foo/snoop</url-pattern>
@@ -23,14 +26,8 @@
     <distributed/>
 
     <security-role>
-        <role-name>
-            manager
-        </role-name>
-        <role-name>
-            director
-        </role-name>
-        <role-name>
-            president
-        </role-name>
+        <role-name> manager </role-name>
+        <role-name> director </role-name>
+        <role-name> president </role-name>
     </security-role>
 </web-app>

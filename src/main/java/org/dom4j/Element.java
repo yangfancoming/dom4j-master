@@ -422,12 +422,9 @@ public interface Element extends Branch {
 
 	/**
 	 * Returns the attribute at the specified indexGets the
-	 *
-	 * @param index DOCUMENT ME!
 	 * @return the attribute at the specified index where index &gt;= 0 and
-	 * index &lt; number of attributes or throws an
-	 * IndexOutOfBoundsException if the index is not within the
-	 * allowable range
+	 * index &lt; number of attributes or throws an IndexOutOfBoundsException
+	 * if the index is not within the allowable range
 	 */
 	Attribute attribute(int index);
 
