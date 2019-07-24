@@ -7,7 +7,7 @@ import java.io.Writer;
 import java.util.List;
 
 /**
- * <code>Node</code> defines the polymorphic behavior for all XML nodes in a
+ * Nodedefines the polymorphic behavior for all XML nodes in a
  * dom4j tree.
  *
  * A node can be output as its XML format, can be detached from its position in
@@ -74,7 +74,7 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>supportsParent</code> returns true if this node supports the
+     * supportsParentreturns true if this node supports the
      * parent relationship.
      * </p>
      * 
@@ -92,14 +92,14 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>getParent</code> returns the parent <code>Element</code> if
+     * getParentreturns the parent Elementif
      * this node supports the parent relationship or null if it is the root
      * element or does not support the parent relationship.
      * </p>
      * 
      * <p>
      * This method is an optional feature and may not be supported for all
-     * <code>Node</code> implementations.
+     * Nodeimplementations.
      * </p>
      * 
      * @return the parent of this node or null if it is the root of the tree or
@@ -109,13 +109,13 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>setParent</code> sets the parent relationship of this node if the
+     * setParentsets the parent relationship of this node if the
      * parent relationship is supported or does nothing if the parent
      * relationship is not supported.
      * </p>
      * 
      * <p>
-     * This method should only be called from inside an <code>Element</code>
+     * This method should only be called from inside an Element
      * implementation method and is not intended for general use.
      * </p>
      * 
@@ -126,31 +126,31 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>getDocument</code> returns the <code>Document</code> that this
-     * <code>Node</code> is part of if this node supports the parent
+     * getDocumentreturns the Documentthat this
+     * Nodeis part of if this node supports the parent
      * relationship.
      * </p>
      * 
      * <p>
      * This method is an optional feature and may not be supported for all
-     * <code>Node</code> implementations.
+     * Nodeimplementations.
      * </p>
      * 
      * @return the document of this node or null if this feature is not
      *         supported or the node is not associated with a
-     *         <code>Document</code>
+     *         Document
      */
     Document getDocument();
 
     /**
      * <p>
-     * <code>setDocument</code> sets the document of this node if the parent
+     * setDocumentsets the document of this node if the parent
      * relationship is supported or does nothing if the parent relationship is
      * not supported.
      * </p>
      * 
      * <p>
-     * This method should only be called from inside a <code>Document</code>
+     * This method should only be called from inside a Document
      * implementation method and is not intended for general use.
      * </p>
      * 
@@ -161,32 +161,32 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>isReadOnly</code> returns true if this node is read only and
-     * cannot be modified. Any attempt to modify a read-only <code>Node</code>
-     * will result in an <code>UnsupportedOperationException</code> being
+     * isReadOnlyreturns true if this node is read only and
+     * cannot be modified. Any attempt to modify a read-only Node
+     * will result in an UnsupportedOperationExceptionbeing
      * thrown.
      * </p>
      * 
-     * @return true if this <code>Node</code> is read only and cannot be
+     * @return true if this Nodeis read only and cannot be
      *         modified otherwise false.
      */
     boolean isReadOnly();
 
     /**
      * <p>
-     * <code>hasContent</code> returns true if this node is a Branch (either
+     * hasContentreturns true if this node is a Branch (either
      * an Element or a Document) and it contains at least one content node such
      * as a child Element or Text node.
      * </p>
      * 
-     * @return true if this <code>Node</code> is a Branch with a nodeCount()
+     * @return true if this Nodeis a Branch with a nodeCount()
      *         of one or more.
      */
     boolean hasContent();
 
     /**
      * <p>
-     * <code>getName</code> returns the name of this node. This is the XML
+     * getNamereturns the name of this node. This is the XML
      * local name of the element, attribute, entity or processing instruction.
      * For CDATA and Text nodes this method will return null.
      * </p>
@@ -198,7 +198,7 @@ public interface Node extends Cloneable {
     /**
      * <p>
      * Sets the text data of this node or this method will throw an
-     * <code>UnsupportedOperationException</code> if it is read-only.
+     * UnsupportedOperationExceptionif it is read-only.
      * </p>
      * 
      * @param name
@@ -218,7 +218,7 @@ public interface Node extends Cloneable {
     /**
      * <p>
      * Sets the text data of this node or this method will throw an
-     * <code>UnsupportedOperationException</code> if it is read-only.
+     * UnsupportedOperationExceptionif it is read-only.
      * </p>
      * 
      * @param text
@@ -299,7 +299,7 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>asXML</code> returns the textual XML representation of this node.
+     * asXMLreturns the textual XML representation of this node.
      * </p>
      * 
      * @return the XML representation of this node
@@ -308,14 +308,14 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>write</code> writes this node as the default XML notation for
+     * writewrites this node as the default XML notation for
      * this node. If you wish to control the XML output (such as for pretty
      * printing, changing the indentation policy etc.) then please use {@link
      * org.dom4j.io.XMLWriter} or its derivations.
      * </p>
      * 
      * @param writer
-     *            is the <code>Writer</code> to output the XML to
+     *            is the Writerto output the XML to
      * 
      * @throws IOException
      *             DOCUMENT ME!
@@ -350,8 +350,8 @@ public interface Node extends Cloneable {
      * This method is useful if you want to remove a node from its source
      * document and add it to another document. For example
      * </p>
-     * <code> Node node = ...; Element someOtherElement = ...;
-     * someOtherElement.add( node.detach() ); </code>
+     *  Node node = ...; Element someOtherElement = ...;
+     * someOtherElement.add( node.detach() ); 
      * 
      * @return the node that has been removed from its parent node if any and
      *         its document if any.
@@ -359,23 +359,17 @@ public interface Node extends Cloneable {
     Node detach();
 
     /**
-     * <p>
-     * <code>selectNodes</code> evaluates an XPath expression and returns the
-     * result as a <code>List</code> of <code>Node</code> instances or
-     * <code>String</code> instances depending on the XPath expression.
-     * </p>
-     * 
-     * @param xpathExpression
-     *            is the XPath expression to be evaluated
-     * 
-     * @return the list of <code>Node</code> or <code>String</code>
-     *         instances depending on the XPath expression
+     * selectNodesevaluates an XPath expression and returns the
+     * result as a Listof Nodeinstances or
+     * Stringinstances depending on the XPath expression.
+     * @param xpathExpression is the XPath expression to be evaluated
+     * @return the list of Nodeor String instances depending on the XPath expression
      */
     List<Node> selectNodes(String xpathExpression);
 
     /**
      * <p>
-     * <code>selectObject</code> evaluates an XPath expression and returns the
+     * selectObjectevaluates an XPath expression and returns the
      * result as an {@link Object}. The object returned can either be a {@link
      * List} of one or more {@link Node}instances or a scalar object like a
      * {@link String}or a {@link Number}instance depending on the XPath
@@ -393,9 +387,9 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>selectNodes</code> evaluates an XPath expression then sorts the
+     * selectNodesevaluates an XPath expression then sorts the
      * results using a secondary XPath expression Returns a sorted
-     * <code>List</code> of <code>Node</code> instances.
+     * Listof Nodeinstances.
      * </p>
      * 
      * @param xpathExpression
@@ -404,16 +398,16 @@ public interface Node extends Cloneable {
      *            is the XPath expression used to compare the results by for
      *            sorting
      * 
-     * @return the list of <code>Node</code> instances sorted by the
+     * @return the list of Nodeinstances sorted by the
      *         comparisonXPathExpression
      */
     List<Node> selectNodes(String xpathExpression, String comparisonXPathExpression);
 
     /**
      * <p>
-     * <code>selectNodes</code> evaluates an XPath expression then sorts the
+     * selectNodesevaluates an XPath expression then sorts the
      * results using a secondary XPath expression Returns a sorted
-     * <code>List</code> of <code>Node</code> instances.
+     * Listof Nodeinstances.
      * </p>
      * 
      * @param xpathExpression
@@ -425,7 +419,7 @@ public interface Node extends Cloneable {
      *            if this parameter is true then duplicate values (using the
      *            comparisonXPathExpression) are removed from the result List.
      * 
-     * @return the list of <code>Node</code> instances sorted by the
+     * @return the list of Nodeinstances sorted by the
      *         comparisonXPathExpression
      */
     List<Node> selectNodes(String xpathExpression, String comparisonXPathExpression,
@@ -433,20 +427,20 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>selectSingleNode</code> evaluates an XPath expression and returns
-     * the result as a single <code>Node</code> instance.
+     * selectSingleNodeevaluates an XPath expression and returns
+     * the result as a single Nodeinstance.
      * </p>
      * 
      * @param xpathExpression
      *            is the XPath expression to be evaluated
      * 
-     * @return the <code>Node</code> matching the XPath expression
+     * @return the Nodematching the XPath expression
      */
     Node selectSingleNode(String xpathExpression);
 
     /**
      * <p>
-     * <code>valueOf</code> evaluates an XPath expression and returns the
+     * valueOfevaluates an XPath expression and returns the
      * textual representation of the results the XPath string-value of this
      * node. The string-value for a given node type is defined in the <a
      * href="http://www.w3.org/TR/xpath">XPath specification </a>.
@@ -462,7 +456,7 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>numberValueOf</code> evaluates an XPath expression and returns
+     * numberValueOfevaluates an XPath expression and returns
      * the numeric value of the XPath expression if the XPath expression results
      * in a number, or null if the result is not a number.
      * </p>
@@ -477,7 +471,7 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>matches</code> returns true if evaluating the given XPath
+     * matchesreturns true if evaluating the given XPath
      * expression on this node returns a non-empty node set containing this
      * node.
      * </p>
@@ -487,7 +481,7 @@ public interface Node extends Cloneable {
      * that behaviour, to evaluate if an XPath expression matches something,
      * then you can use the following code to be equivalent...
      * </p>
-     * <code>if ( node.selectSingleNode( "/some/path" ) != nulll )</code>
+     * if ( node.selectSingleNode( "/some/path" ) != nulll )
      * 
      * @param xpathExpression
      *            is an XPath expression
@@ -498,7 +492,7 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>createXPath</code> creates an XPath object for the given
+     * createXPathcreates an XPath object for the given
      * xpathExpression. The XPath object allows the variable context to be
      * specified.
      * </p>
@@ -515,7 +509,7 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>asXPathResult</code> returns a version of this node which is
+     * asXPathResultreturns a version of this node which is
      * capable of being an XPath result. The result of an XPath expression
      * should always support the parent relationship, whether the original XML
      * tree was singly or doubly linked. If the node does not support the parent
@@ -526,13 +520,13 @@ public interface Node extends Cloneable {
      * @param parent
      *            DOCUMENT ME!
      * 
-     * @return a <code>Node</code> which supports the parent relationship
+     * @return a Nodewhich supports the parent relationship
      */
     Node asXPathResult(Element parent);
 
     /**
      * <p>
-     * <code>accept</code> is the method used in the Visitor Pattern.
+     * acceptis the method used in the Visitor Pattern.
      * </p>
      * 
      * @param visitor
@@ -542,7 +536,7 @@ public interface Node extends Cloneable {
 
     /**
      * <p>
-     * <code>clone</code> will return a deep clone or if this node is
+     * clonewill return a deep clone or if this node is
      * read-only then clone will return the same instance.
      * </p>
      * 

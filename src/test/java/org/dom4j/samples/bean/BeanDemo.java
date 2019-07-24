@@ -45,7 +45,7 @@ public class BeanDemo extends SAXDemo {
         return reader.read(url);
     }
 
-    protected void process(Document document) throws Exception {
+    protected void process(Document document) {
         // find all of the windows
         List windows = document.selectNodes("//window");
         for (Iterator iter = windows.iterator(); iter.hasNext();) {

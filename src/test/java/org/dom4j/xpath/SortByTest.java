@@ -17,15 +17,11 @@ import java.util.List;
  */
 public class SortByTest extends AbstractTestCase {
 
-    public void testXPaths() throws Exception {
+    public void testXPaths()  {
         List list = document.selectNodes("//SPEAKER", "NAME");
-
         log("Number of SPEAKER instances: " + list.size());
-
         List noDuplicates = document.selectNodes("//SPEAKER", ".", true);
-
         log("Number of distinct SPEAKER instances: " + noDuplicates.size());
-
         log("Number of distinct SPEAKER instances: " + noDuplicates.size());
     }
 

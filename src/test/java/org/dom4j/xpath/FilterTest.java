@@ -17,13 +17,11 @@ import java.util.List;
  * @version $Revision: 1.3 $
  */
 public class FilterTest extends AbstractTestCase {
-    protected static String[] paths = {".[name()='author']",
-            ".[name()='XXXX']", ".[.='James Strachan']", ".[.='XXXX']"};
 
+    protected static String[] paths = {".[name()='author']", ".[name()='XXXX']", ".[.='James Strachan']", ".[.='XXXX']"};
 
-    public void testXPaths() throws Exception {
+    public void testXPaths() {
         int size = paths.length;
-
         for (int i = 0; i < size; i++) {
             testXPath(paths[i]);
         }
@@ -32,8 +30,7 @@ public class FilterTest extends AbstractTestCase {
     // Implementation methods
     // -------------------------------------------------------------------------
     protected void testXPath(String xpathExpression) {
-        NodeFilter nodeFilter = DocumentHelper
-                .createXPathFilter(xpathExpression);
+        NodeFilter nodeFilter = DocumentHelper.createXPathFilter(xpathExpression);
         assertTrue("No NodeFilter object was created", nodeFilter != null);
 
         List list = document.selectNodes("//author");

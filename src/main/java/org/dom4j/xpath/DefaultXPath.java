@@ -29,7 +29,7 @@ import org.jaxen.dom4j.Dom4jXPath;
  * Default implementation of {@link org.dom4j.XPath}which uses the <a
  * href="http://jaxen.org">Jaxen </a> project.
  * </p>
- * 
+ *
  * @author bob mcwhirter
  * @author <a href="mailto:jstrachan@apache.org">James Strachan </a>
  */
@@ -42,10 +42,10 @@ public class DefaultXPath implements org.dom4j.XPath, NodeFilter, Serializable {
 
     /**
      * Construct an XPath
-     * 
+     *
      * @param text
      *            DOCUMENT ME!
-     * 
+     *
      * @throws InvalidXPathException
      *             DOCUMENT ME!
      */
@@ -62,7 +62,7 @@ public class DefaultXPath implements org.dom4j.XPath, NodeFilter, Serializable {
 
     /**
      * Retrieve the textual XPath string used to initialize this Object
-     * 
+     *
      * @return The XPath string
      */
     public String getText() {
@@ -123,11 +123,9 @@ public class DefaultXPath implements org.dom4j.XPath, NodeFilter, Serializable {
     public List<Node> selectNodes(Object context) {
         try {
             setNSContext(context);
-
             return (List<Node>) xpath.selectNodes(context);
         } catch (JaxenException e) {
             handleJaxenException(e);
-
             return Collections.emptyList();
         }
     }
@@ -140,7 +138,7 @@ public class DefaultXPath implements org.dom4j.XPath, NodeFilter, Serializable {
     }
 
     public List<Node> selectNodes(Object context, org.dom4j.XPath sortXPath,
-            boolean distinct) {
+                                  boolean distinct) {
         List<Node> answer = selectNodes(context);
         sortXPath.sort(answer, distinct);
 
@@ -212,7 +210,7 @@ public class DefaultXPath implements org.dom4j.XPath, NodeFilter, Serializable {
      * <code>sort</code> sorts the given List of Nodes using this XPath
      * expression as a {@link Comparator}.
      * </p>
-     * 
+     *
      * @param list
      *            is the list of Nodes to sort
      */
@@ -225,7 +223,7 @@ public class DefaultXPath implements org.dom4j.XPath, NodeFilter, Serializable {
      * <code>sort</code> sorts the given List of Nodes using this XPath
      * expression as a {@link Comparator}and optionally removing duplicates.
      * </p>
-     * 
+     *
      * @param list
      *            is the list of Nodes to sort
      * @param distinct
@@ -276,7 +274,7 @@ public class DefaultXPath implements org.dom4j.XPath, NodeFilter, Serializable {
 
     /**
      * Sorts the list based on the sortValues for each node
-     * 
+     *
      * @param list
      *            DOCUMENT ME!
      * @param sortValues
@@ -309,7 +307,7 @@ public class DefaultXPath implements org.dom4j.XPath, NodeFilter, Serializable {
 
     /**
      * Removes items from the list which have duplicate values
-     * 
+     *
      * @param list
      *            DOCUMENT ME!
      * @param sortValues
@@ -333,10 +331,10 @@ public class DefaultXPath implements org.dom4j.XPath, NodeFilter, Serializable {
 
     /**
      * DOCUMENT ME!
-     * 
+     *
      * @param node
      *            DOCUMENT ME!
-     * 
+     *
      * @return the node expression used for sorting comparisons
      */
     protected Object getCompareValue(Node node) {
